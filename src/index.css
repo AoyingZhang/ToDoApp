@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dir{
+  font-size: 20px;
+  background-color: #57c24b;
+  padding: 15px;
+  border-radius: 8px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+}
+.task {
+  font-size: 20px;
+  background-color: #8bca84;
+  padding: 15px;
+  border-radius: 8px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
+}
+ul li:hover {
+  background-color: #72bf6a;
+  cursor: pointer;
+}

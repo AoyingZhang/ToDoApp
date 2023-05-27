@@ -13,15 +13,20 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background: linear-gradient(90deg, #68bb59 12%, #8bca84 100%);
+  color: #282c34;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 50px;
+  padding: 20px;
+}
+.header--image {
+  margin-right: 6px;
+}
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
 }
 
 .App-link {
