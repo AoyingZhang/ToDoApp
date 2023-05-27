@@ -50,3 +50,19 @@ input{
   margin-right: 40px;
   size: 50px;
 }
+.deleteButton{
+  padding: 5px;
+  border-radius: 7px;
+  margin-left: 50px;
+  font-size: 14px;
+  color: white;
+  background-color: #2b7423;
+}
+.addButton {
+  padding: 5px;
+  border-radius: 7px;
+  margin-left: 50px;
+  font-size: 14px;
+  color: white;
+  background-color: #276221;
+}
