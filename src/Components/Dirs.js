@@ -1,12 +1,23 @@
 import React from "react"
-import Dir from "./Dir"
+import Task from "./Task"
+import Data from "../Data"
 export default function Dirs(){
-    return(
-    <div>
-        <ul>
-            <Dir/>
-            <Dir/>
-        </ul>
-    </div>
+    
+    const displayDirs = Data.map(dir=>{
+        return (
+            <div>
+            
+            { <li className="dir">{dir.DirTitle}</li>}
+            {/* display all tasks */}
+            {dir.Tasks.map(tas => <Task title={tas.Title}/>)}
+            </div>
+        )
+    })
+    return (
+        <div className="whole-dir">
+            <ul>
+                {displayDirs}
+            </ul>
+        </div>
     )
 }

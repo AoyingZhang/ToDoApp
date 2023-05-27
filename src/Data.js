@@ -1,9 +1,29 @@
 export default[
+    //a dir
     {
-        Title:"item1"
+        DirTitle:"French",
+        Tasks: [
+        {
+            Title:"Duolingo course"
+        },
+        {
+            Title:"Vocabulary review"
+        },
+        {
+            Title:"Taking French lecture"
+        }
+        ]
     },
     {
-        Title:"item2"
+        DirTitle:"React",
+        Tasks: [
+        {
+            Title:"Scrimba course"
+        },
+        {
+            Title:"Side react project"
+        },
+        ]
     }
-      
+    
 ]
