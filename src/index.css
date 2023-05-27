@@ -29,6 +29,7 @@ ul {
 }
 .task {
   font-size: 20px;
+  display: flex;
   background-color: #8bca84;
   padding: 15px;
   border-radius: 8px;
@@ -36,7 +37,16 @@ ul {
   text-align: center;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2)
 }
-ul li:hover {
+.task:hover {
   background-color: #72bf6a;
   cursor: pointer;
+}
+.dir:hover {
+  background-color: #68d15d;
+  cursor: pointer;
+}
+input{
+  margin: 10px;
+  margin-right: 40px;
+  size: 50px;
 }
