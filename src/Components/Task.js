@@ -10,7 +10,7 @@ export default function Task(props){
         <div className="task">
             <input type="checkbox" onChange={completeTask} checked={completed}/>
             <p>{props.title}</p>
-            <button className="deleteButton" onClick={props.handleDelete(props.id)}>Delete</button>
+            <button className="deleteButton" onClick={()=>props.handleDelete(props.id)}>Delete</button>
         </div>
     )
 }

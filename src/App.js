@@ -14,11 +14,11 @@ function App() {
     }
   }
   function handleDelete(id){
-
+    setData(prevData => prevData.filter((_, index) => index !== id))
   }
 
   function handleComplete(id){
-
+    
   }
   return (
     <div className="App">
