@@ -1,27 +1,31 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
 import Header from "./Components/Header"
 import TaskList from "./Components/TaskList"
-import Data from "./Data"
+
 function App() {
-  const input = document.getElementById("inputEl")
+  var [Data, setData]=React.useState(["task1", "task 2", "task 3", "task 4"])
+  var [input, setInput] = React.useState("")
+
   function appendElement(){
-    Data.push(`
-    {
-      Id:${Data.length+1}, 
-      Title: "${input.value}"
+    if(input!==""){
+      setData(Data=>[...Data, input])
+      setInput("")
     }
-    `)
-    input.value=""
+  }
+  function handleDelete(id){
+
+  }
+
+  function handleComplete(id){
+
   }
   return (
     <div className="App">
       <Header/>
-      <input id="inputEl"type="text"/>
+      <input className="inputEl" type="text" value={input} onChange={e=>setInput(e.target.value)}/>
       <button className="addButton" onClick={appendElement}>Add</button>
-      
-      <TaskList/>
-      
+      <TaskList data={Data} handleDelete={handleDelete} handleComplete={handleComplete}/>
     </div>
   );
 }

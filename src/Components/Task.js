@@ -1,14 +1,16 @@
 import React from "react"
+//title, id, handleComplete, handleDelete
 export default function Task(props){
-    // Tasks contains title, description, color, status, Date
+    const [completed, setCompleted] = React.useState(false)
     function completeTask(){
-        console.log("changed!!!")
+        setCompleted(prev=>!prev)
+        props.handleComplete(props.id)
     }
     return (
         <div className="task">
-            <input type="checkbox" onChange={completeTask} {...props} />
-            <li >{props.title}</li>
-            <button class="deleteButton">Delete</button>
+            <input type="checkbox" onChange={completeTask} checked={completed}/>
+            <p>{props.title}</p>
+            <button className="deleteButton" onClick={props.handleDelete(props.id)}>Delete</button>
         </div>
     )
 }

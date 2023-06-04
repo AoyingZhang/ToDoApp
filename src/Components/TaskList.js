@@ -1,18 +1,12 @@
 import React from "react"
 import Task from "./Task"
-import Data from "../Data"
-export default function Dirs(){
-    
-    const displayTasks = Data.map(task=>{
-        return (
-            <Task title={task.Title}/>
-        )
-    })
+//props contains data array, handleComplete, handleDelete
+export default function TaskList(props){
+    var displayTasks = props.data.map((task, index)=>{<Task title={task} id={index} 
+    handleComplete={props.handleComplete} handleDelete={props.handleDelete}/>})
     return (
         <div className="whole-dir">
-            <ul>
-                {displayTasks}
-            </ul>
+            {displayTasks}
         </div>
     )
 }
